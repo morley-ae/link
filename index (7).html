@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord Invite</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="image-wrapper">
+        <img src="logo.png" alt="Profile" class="profile-image">
+      </div>
+      <p class="instruction">Copy the link and paste it into your browser!</p>
+      <p class="link-display">https://discord.gg/ehVMQtUacr</p>
+      <button id="copy-btn" class="copy-btn" onclick="copyLink()">Copy Link</button>
+    </div>
+  </div>
+
+  <script>
+    function copyLink() {
+      const btn = document.getElementById('copy-btn');
+      navigator.clipboard.writeText('https://discord.gg/ehVMQtUacr').then(function() {
+        btn.textContent = 'Copied to Clipboard';
+        btn.classList.add('copied');
+        setTimeout(function() {
+          btn.textContent = 'Copy Link';
+          btn.classList.remove('copied');
+        }, 2500);
+      });
+    }
+  </script>
+</body>
+</html>
