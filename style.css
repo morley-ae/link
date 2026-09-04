@@ -67,6 +67,11 @@ body {
   transform: translateY(-4px);
 }
 
+/* Abstand der Überschrift nach unten vergrößert */
+.title {
+  margin-bottom: 2.5rem; /* Du kannst den Wert (z.B. 2rem oder 3rem) nach Belieben anpassen */
+}
+
 .image-wrapper {
   margin-bottom: 2rem;
   position: relative;
